@@ -22,3 +22,4 @@ Y = zpk(minreal(C*inv(s*eye(2)-A)*(B*U+x0),1e-3))
 M = abs(r(1)), 2*M
 
 phi = angle(r(1))
+%
