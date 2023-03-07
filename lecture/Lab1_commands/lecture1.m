@@ -54,26 +54,22 @@ H = tf(sys)
 sys = ss(H)
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% LTI systems representation
-% example 4 L03
-
- A = [-3 2;-2 -3]; B = [1;0]; C = [0 1]; D = 0;
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % example 2 L02
 
-X = zpk(minreal(inv(s*eye(2)-A)*(B*U+x0),1e-3))
+% Define the Laplace variabile s using tf statement
+s = tf('s')
 
-A = [-3 2;-2 -3]
-B = [1;0]
-C = [0 1]
+% Introduce the system matrices A, B and C
+A = [-3 2;-2 -3], B = [1;0], C = [0 1]
 
+% Define the system input and initial condition
+U = 1/s, x0 = [1;1]
+
+% Compute use statements minreal and zpk, in order to simplify and highlights
+% denominator roots respectively
 Y = zpk(minreal(C*inv(s*eye(2)-A)*(B*U+x0),1e-3))
 
-sys = ss(A,B,C,D)
-
-
-
+% For Y(s) , compute the PFE using the statements tfdata and residue
 [num_Y,den_Y] = tfdata(Y,'v')
 
 [r,p] = residue(num_Y, den_Y)
