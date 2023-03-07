@@ -74,6 +74,9 @@ Y = zpk(minreal(C*inv(s*eye(2)-A)*(B*U+x0),1e-3))
 
 [r,p] = residue(num_Y, den_Y)
 
+% Compute magnitude and phase of the residue corresponding to the complex
+% root with positive imaginary part
+
 M = abs(r(1))
 
 phi = angle(r(1))
