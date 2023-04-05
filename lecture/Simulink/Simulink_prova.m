@@ -22,3 +22,4 @@ plot(my_otuput)
 % 3. the rise time tr
 % 4. the settling time ts,1%
 
+stepinfo()
