@@ -2,3 +2,5 @@ Makefile
 *.md
 *.py
 *.html
+
+README.md
