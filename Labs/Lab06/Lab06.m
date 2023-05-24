@@ -65,11 +65,11 @@ C = (1/C_p) * C_i * C_z; % final controller
 out = sim("lab6.slx");
 plot(out)
 
-plot(out.y.Time, out.y.Data, 'k', 'LineWidth', 2), grid on, title("step response y(t)");
-y_step_response = stepinfo(out.y.Data, out.y.Time, 'SettlingTimeThreshold', 0.02, 'RiseTimeThreshold',[0 1])
+% plot(out.y.Time, out.y.Data, 'k', 'LineWidth', 2), grid on, title("step response y(t)");
+% y_step_response = stepinfo(out.y.Data, out.y.Time, 'SettlingTimeThreshold', 0.02, 'RiseTimeThreshold',[0 1])
 
 %% step info
-stepinfo(L4)
-S = stepinfo(out.y.data, out.y.time, 'RiseTimeLimits', [0 1],  'SettlingTimeThreshold', 0.05)
+% stepinfo(L4)
+% S = stepinfo(out.y.data, out.y.time, 'RiseTimeLimits', [0 1],  'SettlingTimeThreshold', 0.05)
 
 save s270874
