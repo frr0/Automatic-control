@@ -18,11 +18,7 @@ T_p = 0.42; % dB
 S_p = 2.67; % dB
 wc_des = 1.5; %
 
-%% Loop function tf: L prime
-%L1 = G*C_ss;
-figure(1), nichols(L1, 'b'), hold on, T_grid(T_p), S_grid(S_p), S_grid(M_S_LF)
-[magnitude_prime, phase_prime] = nichols(L1, wc_des);
-magnitude_prime = 20*log(magnitude_prime);
+	
 
 
 %% lead network design
